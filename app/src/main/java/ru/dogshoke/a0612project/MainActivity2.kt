@@ -29,13 +29,13 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val achievments = resources.getStringArray(R.array.achievments)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, achievments)
+        val status = resources.getStringArray(R.array.status)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, status)
         binding.spinner.adapter = adapter
 
         binding.spinner.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            var selectedItem = achievments[position]
+            var selectedItem = status[position]
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
