@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import ru.dogshoke.a0612project.databinding.ActivityMainBinding
 import ru.dogshoke.a0612project.databinding.SecondActivityBinding
 
@@ -40,5 +41,27 @@ class MainActivity2 : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         })
+
+
+        fun makeAchivment() : Array<Achievment?>{
+
+            val arr = arrayOfNulls<Achievment>(8)
+
+            val achievmentArr = arrayOf("Достижение 1", "Достижение 2", "Достижение 3", "Достижение 4", "Достижение 5", "Достижение 6", "Достижение 7", "Достижение 8")
+            val dateArr = arrayOf("1", "2", "3", "4", "5", "6", "7", "8")
+
+            for (i in arr.indices){
+                arr[i]?.name = achievmentArr[i]
+                arr[i]?.date = dateArr[i]
+            }
+
+            return arr
+        }
+
+
+        val adapter2 = MyAchievmentAdapter(makeAchivment())
+        val rv = findViewById<RecyclerView>(R.id.RV)
+        rv.adapter = adapter2
+
     }
 }
