@@ -28,7 +28,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/testimage"
+                android:src="@drawable/round_account_circle_24"
                 android:background="@drawable/circlestyle"
                 android:scaleType="centerCrop"
                 android:clipToOutline="true"
@@ -36,18 +36,18 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="name"/>
+                android:hint="name"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="work position"/>
+                android:hint="work position"/>
 
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
 
             android:orientation="vertical">
             <ImageView
@@ -58,7 +58,7 @@
             <LinearLayout
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp">
+                android:layout_marginTop="10dp">
                 <ImageView
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
@@ -83,6 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="88005553535"
+                    android:textColor="#00bfff"
                     android:onClick="@{() -> viewModel.clickNumber()}"/>
             </LinearLayout>
             <LinearLayout
@@ -98,11 +99,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="mail@yandex.ru"
+                    android:textColor="#00bfff"
                     android:onClick="@{() -> viewModel.clickEmail()}"/>
             </LinearLayout>
             <ImageView
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/black"/>
@@ -113,11 +114,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top">
+            android:layout_marginTop="-15dp">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
